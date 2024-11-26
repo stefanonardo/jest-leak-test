@@ -1,0 +1,30 @@
+{
+  "name": "jest-leak-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "test": "tsc && node --no-compilation-cache --expose-gc node_modules/.bin/jest --detectOpenHandles --config=jest.config.js --forceExit --runInBand --logHeapUsage",
+    "start": "node dist/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jest": "^29.5.14",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.2.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.2"
+  },
+  "dependencies": {
+    "@aws-sdk/client-cloudwatch-logs": "^3.699.0",
+    "@aws-sdk/client-ec2": "^3.699.0",
+    "@aws-sdk/client-ecr": "^3.699.0",
+    "@aws-sdk/client-ecs": "^3.699.0",
+    "@aws-sdk/client-emr": "^3.699.0",
+    "@aws-sdk/client-eventbridge": "^3.699.0",
+    "@aws-sdk/client-sqs": "^3.699.0"
+  }
+}
